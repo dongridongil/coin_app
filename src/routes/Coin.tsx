@@ -179,7 +179,7 @@ function Coin({}: ICoinProps) {
         }
     );
     const loading = infoLoading || tickersLoading;
-    const percent24h = tickersData?.quotes.USD.percent_change_24h;
+    // const percent24h = tickersData?.quotes.USD.percent_change_24h;
     const coinPrice = tickersData?.quotes.USD.price;
     return (
         <Container>
@@ -201,7 +201,7 @@ function Coin({}: ICoinProps) {
                         </button>
                     </Nav>
 
-                    <Header name={infoData?.name} rank={infoData?.rank} price={coinPrice} per24={percent24h} />
+                    {/* <Header name={infoData?.name} rank={infoData?.rank} price={coinPrice} per24={percent24h} /> */}
 
                     <Switch>
                         <Route path={`/:coinId/price`}>
