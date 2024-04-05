@@ -1,11 +1,11 @@
-import { Switch, Route, HashRouter } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Coin from './routes/Coin';
 import Coins from './routes/Coins';
 
 interface IRouertProps {}
 function Router({}: IRouertProps) {
     return (
-        <HashRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
             <Switch>
                 <Route path="/:coinId">
                     <Coin />
@@ -14,7 +14,7 @@ function Router({}: IRouertProps) {
                     <Coins />
                 </Route>
             </Switch>
-        </HashRouter>
+        </BrowserRouter>
     );
 }
 export default Router;
